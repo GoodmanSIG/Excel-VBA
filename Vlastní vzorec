@@ -8,4 +8,5 @@ Function prodej(hodnota As Double) As Double
     Dim slevy As Double
     slevy = hodnota * (procento1 / 100) + hodnota * (procento2 / 100)
     prodej = hodnota - slevy
+
 End Function
