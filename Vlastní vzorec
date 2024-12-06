@@ -1,13 +1,18 @@
 Function prodej(hodnota As Double) As Double
 
-    Dim procento1 As Double
-    Dim procento2 As Double
+    Dim Taxes As Double
+    Dim SetupFee As Double
+    
+    Taxes = Range("A1").Value ' Procento 1 z buňky A1
+    SetupFee = Range("A2").Value ' Procento 2 z buňky A2
 
-    procento1 = Range("A1").Valu
-    procento2 = Range("A2").Value
-
-    Dim slevy As Double
-    slevy = hodnota * (procento1 / 100) + hodnota * (procento2 / 100)
-    prodej = hodnota - slevy
+    Dim procenta As Double
+    procenta = hodnota * (Taxes / 100) + hodnota * (SetupFee / 100)
+    prodej = hodnota - procenta
 
 End Function
+
+
+
+V bunce A1 = 5%
+V bunce A2 = 11%
